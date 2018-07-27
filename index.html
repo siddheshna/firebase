@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bill Split</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="status text-center" id="login-status"></div>
+<div class="container">
+	<div class="login-form-wrapper form-wrapper">
+		<div class="form-title text-center">Login</div>
+		<p class="error-msg" id="login-error"></p>
+		<div class="row">
+			<form id="login" method="post" class="login-form mb-10">
+				<div class="col-md-12 input-wrapper">
+					<input class="form-input" id="email" name="email" type="email" autocomplete="off" placeholder="Email">
+				</div>
+				<div class="col-md-12 input-wrapper">
+					<input class="form-input" id="password" type="password" class="validate" placeholder="Password">
+				</div>
+				<div class="col-md-12 text-right clearfix forgot-link-wrapp mb-20">
+					<div class="pull-left">
+						<a href="#create-account" id="create-account">Create Account</a>
+					</div>
+					<div class="pull-right">
+						<a href="#forgot" id="forgot-password">Forgot Password</a>
+					</div>
+				</div>
+				<div class="col-md-12 mb-20">
+					<input class="form-submit" type="submit" value="Login" />
+				</div>
+			</form>
+			<div class="col-md-12 text-center">
+				<p class="text-center mb-10">Or</p>
+				<button id="google" class="google-login">Login With Google</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="create-form-wrapper form-wrapper">
+		<div class="form-title text-center">Create Account</div>
+		<p class="error-msg" id="create-error"></p>
+		<div class="row">
+			<form id="create-user" method="post" class="create-form mb-10">
+				<div class="col-md-12 input-wrapper">
+					<input class="form-input" id="new-email" name="email" type="email" autocomplete="off" placeholder="Email">
+				</div>
+				<div class="col-md-12 input-wrapper">
+					<input class="form-input" id="new-password" type="password" class="validate" placeholder="Password">
+				</div>
+				<div class="col-md-12 input-wrapper">
+					<input class="form-input" id="confirm-password" type="password" class="validate" placeholder="Confirm Password">
+				</div>
+				<div class="col-md-12 text-right clearfix forgot-link-wrapp mb-20">
+					<a href="#login" id="back-to-login">Back to login</a>
+				</div>
+				<div class="col-md-12 mb-20">
+					<input class="form-submit" type="submit" value="Create Account" />
+				</div>
+			</form>
+			<div class="col-md-12 text-center">
+				<p class="text-center mb-10">Or</p>
+				<button id="google" class="google-login">Login With Google</button>
+			</div>
+		</div>
+	</div>
+</div>
+<footer class="footer">
+	<h3 class="copyright text-center">&copy Copyright</h3>
+</footer>
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+<script src="firebase-init.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		crossorigin="anonymous">
+</script>
+<script src="manageuser.js"></script>
+</body>
+</html>
